@@ -7,7 +7,7 @@
 Lovable
 
 ## Prototype Link
-magic-assist-insight
+magic-assist-insight.lovable.app
 
 ## AI Value Archetype
 Claude
