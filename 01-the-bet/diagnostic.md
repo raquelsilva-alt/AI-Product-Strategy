@@ -45,7 +45,7 @@
 >
 > 1. Attack: It reduces alucinations and is very specific for our usage 
 > 2. Wedge: We have all the integration 
-> 3. Why users switch: Proiatary and focused data relveant to our users and low level of alutiantions
+> 3. Why users switch: Propriatary and focused data relveant to our users and low level of alutiantions
 
 ---
 
