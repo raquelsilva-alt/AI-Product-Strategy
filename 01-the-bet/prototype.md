@@ -4,16 +4,17 @@
 <!-- One sentence: what does this prototype demonstrate? -->
 
 ## Tool Used
-<!-- v0 / Cursor / Lovable / other -->
+Lovable
 
 ## Prototype Link
-<!-- Paste the shareable URL -->
+magic-assist-insight
 
 ## AI Value Archetype
-<!-- Automator / Copilot / Oracle / Creator / Orchestrator -->
+Claude
 
 ## The Bet in One Sentence
-<!-- What you're building, for whom, why now -->
+Make proactivity the win Happy clients do not need to report anything and support is less than 2 min 
 
 ## Kill Criteria
-<!-- When would you stop? What evidence would kill this bet? -->
+The identification fails 5% to solve.
+Predictability and number of Devices accurace below 98%
