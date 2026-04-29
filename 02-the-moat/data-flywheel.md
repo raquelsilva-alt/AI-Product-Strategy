@@ -42,18 +42,21 @@ __________________________________________________
 
 <img width="800" height="376" alt="image" src="https://github.com/user-attachments/assets/c4d35a61-1501-4f7b-b973-2b4c81f93e02" />
 
-
+Loop 1: Usage → Signal (network)
+Loop 2: Signal → Model  (correction)
+Loop 3: Model → Experience (domain context)
+Loop 4: Experience → Usage (preference)
 ---
 
 ## Competitive Positioning
 
-**Axis X:**
-**Axis Y:**
+**Axis X: **
+**Axis Y: **
 
 | Competitor | X Position | Y Position | Notes |
 |-----------|-----------|-----------|-------|
 | Your product | | | |
-| | | | |
+| Internal Product  | | | |
 | | | | |
 | | | | |
 
@@ -63,6 +66,6 @@ __________________________________________________
 
 *Your partner played the Big Tech attacker. What was their plan to kill you?*
 
-**Attacker:**
-**Attack vector:**
-**Your defense:**
+**Attacker: Internal Competition**
+**Attack vector: Have more data and improve faster  **
+**Your defense: Keep improving the platform make the reponsiveness to user feedback and improve faster  **
