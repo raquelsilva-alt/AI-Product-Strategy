@@ -40,6 +40,10 @@ __________________________________________________
 **Score: 3/5**
 *Does it any user or team member makes the product better for evryone ? *
 
+**Total Flywheel Score: __/20**
+**Weakest Loop:**
+**Fix for weakest loop:**
+
 <img width="800" height="376" alt="image" src="https://github.com/user-attachments/assets/c4d35a61-1501-4f7b-b973-2b4c81f93e02" />
 
 Loop 1: Usage → Signal (network)
