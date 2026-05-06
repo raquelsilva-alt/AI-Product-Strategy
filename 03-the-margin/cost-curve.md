@@ -39,3 +39,15 @@
 **Before (traditional SaaS):**
 **After (AI-enabled):**
 **Net margin shift:**
+
+Model shown in the slidedeck 
+Features → tiers → blended COGS
+Feature	Complexity	Model Tier	Cost/Req	Volume %	Weighted
+_____	Simple	Small	$_____	___%	$_____
+_____	Medium	Mid	$_____	___%	$_____
+_____	Complex	Frontier	$_____	___%	$_____
+Blended				100%	$_____
+Estimate OK — structure beats false precision
+
+Keep in Mind
+80% of requests can usually run on a cheaper model. Adjust the cascading ratio in your cost curve — the savings compound fast. Start with your highest-volume feature.
