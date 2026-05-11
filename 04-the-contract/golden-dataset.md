@@ -19,12 +19,15 @@
 
 ## Confidence UX Design
 
-**Approach:** show uncertainty / tiered confidence / human-in-loop trigger
+**Approach:** Tiered confidence — no mixed signals, clear routing per tier
 
-**High confidence (>90%):**
-**Medium confidence (70-90%):**
-**Low confidence (<70%):**
+**High confidence (>90%):** Answer returned directly with source reference, no friction
 
+**Medium confidence (70-90%):** Answer returned with advisory — *"Please confirm this with your team or the relevant department before proceeding"*
+
+**Low confidence (<70%):** Partial answer shown with warning — *"Here's what I found, but I'm not confident this is accurate for your specific situation — please verify with an engineer or the relevant department before acting on this"*
+
+**User control surface:** Feedback button + accuracy rating on every response
 **User control surface:**
 
 ## Reliability Contract
