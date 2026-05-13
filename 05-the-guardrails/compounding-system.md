@@ -49,16 +49,46 @@ document that has since been updated, with no indication that the source may be 
 **Regulatory exposure (EU AI Act / other):**
 
 ## Agent Topology
-<!-- If using agents: what can each agent do? What can't it do? Who approves what? -->
+
+*Note: Full agent architecture is owned by engineering. The topology below is a 
+recommended starting point for validation with the engineering team.*
+
+**Retrieval Agent**
+- Can: Search the RAG across permitted knowledge bases, identify correct device 
+model/version, pull relevant documents, videos, and images
+- Cannot: Access knowledge bases outside the user's permission scope, query 
+cross-team RAGs until boundaries are built
+- Approves: Source selection for the query
+
+**Summarization Agent**
+- Can: Generate step-by-step resolutions, contract summaries, and multi-source 
+synthesized answers with source attribution
+- Cannot: Perform any system actions, modify documents, or access external systems
+- Approves: Format and content of the response
+
+**Confidence & Routing Agent**
+- Can: Evaluate output confidence, apply tiered UX logic (high/medium/low), 
+flag low-confidence responses, surface warnings, recommend escalation
+- Cannot: Override a human decision, close tickets, or take autonomous action
+- Approves: Whether the answer is shown directly, shown with a warning, or blocked 
+and escalated to a human
+
+**Governance note:** No agent has write access to any connected system. 
+All agents are advisory only. Human approval required for any action taken 
+as a result of AI output.
 
 ## Shadow AI Audit
 
 | Tool | Owner | Risk Level | Decision |
 |------|-------|-----------|----------|
-| | | H / M / L | keep / govern / kill |
-| | | H / M / L | keep / govern / kill |
-| | | H / M / L | keep / govern / kill |
+| ChatGPT | IT / Authorized | M | Govern — add usage monitoring |
+| GitHub Copilot | Engineering / Authorized | L | Keep |
+| Internal network AI tools | Cisco IT / Authorized | L | Keep |
+| Unmonitored personal AI accounts | Unknown | H | Govern — build detection and enforce policy; employees risk termination for unauthorized use |
 
-**Total tools found:**
-**Tools after triage:**
-**Estimated hidden spend:**
+**Total tools found:** 4 (3 authorized + 1 shadow category identified)
+
+**Tools after triage:** All 4 retained with appropriate governance level — none killed
+
+**Estimated hidden spend:** Unknown — to be assessed. No current visibility into 
+personal account usage. Recommend adding to next governance audit cycle.
