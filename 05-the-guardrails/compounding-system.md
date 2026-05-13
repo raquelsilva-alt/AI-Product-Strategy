@@ -14,7 +14,31 @@
 Ready for Context Connectivity when you are!
 
 ## Context Connectivity
-<!-- How does knowledge flow across teams and domains? Where does it silo? -->
+
+Knowledge flows into the system from multiple sources: engineering documentation, 
+contracts, vendor manuals, field engineer resolution uploads, and internally produced 
+documentation (new and existing).
+
+**Where it flows well:**
+- SharePoint-connected sources auto-scan and stay current
+- Field engineers can upload new resolutions directly to the RAG, expanding coverage over time
+
+**Where it silos:**
+
+- Static file uploads (PDFs, docs uploaded directly instead of via URL) do not 
+auto-update when the source document changes — answers may be based on outdated 
+firmware or contract versions without the user knowing
+- Cross-team RAG access is currently blocked — engineering, contracts, and field 
+teams cannot query each other's knowledge bases due to confidentiality concerns. 
+Boundaries and permission layers need to be built before cross-team connectivity 
+can be enabled safely
+
+**Partial mitigation in development:**
+- 2x weekly automated scan to detect differences between uploaded static docs and 
+their source — not yet live
+
+**Key risk:** A user could receive a confident, well-sourced answer based on a 
+document that has since been updated, with no indication that the source may be stale
 
 ## Governance Policy
 
