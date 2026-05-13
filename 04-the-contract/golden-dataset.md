@@ -34,13 +34,7 @@
 
 | Metric | Target | Measurement | Alert Threshold |
 |--------|--------|-------------|-----------------|
-| Accuracy | | | |
-| Hallucination rate | | | |
-| Latency (p95) | | | |
-| Drift velocity | | | |
-
-## HITL Architecture
-<!-- When does a human step in? What's the escalation path? -->
-
-## Red-Team Findings
-*What failure mode did your partner find that you missed?*
+| Accuracy | 90% | LLM judge eval on golden dataset | <85% |
+| Hallucination rate | 0% contract/warranty — <2% technical | Automated source grounding check | Any hallucination on contract queries — >1% on technical |
+| Latency (p95) | <3 seconds | Response time monitoring | >3s on 5% of queries |
+| Drift velocity | Monitored monthly | Golden dataset re-evaluation | >5% accuracy drop month-over-month |
