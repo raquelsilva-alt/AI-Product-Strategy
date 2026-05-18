@@ -516,3 +516,23 @@ Deflection rates are early-stage estimates to be validated as system scales.*
 1. Run a 2-week pilot with real engineers to measure actual deflection rate — replace the assumption with evidence before scaling or presenting to leadership
 2. Fix the broken drift remediation loop — assign an owner, define a time-to-fix SLA, and automate the knowledge base refresh trigger
 3. Build the cross-team RAG permissions layer — without it, the system cannot synthesize across engineering and contracts knowledge, which is its highest-value use case and primary moat driver
+
+4. **Thesis (1 sentence):**
+We have already built the system that cuts Cisco's support cost per request by 88% — now we need the investment to make it reliable enough to scale.
+
+**The case:**
+1. Why now: AI-assisted support is no longer experimental — we have 4,700 real service requests per month running through this system today, with a measured cost of $1.61 per SR against a $13 human baseline. The window is now: every month we delay scaling, we leave $38,851 in recoverable cost on the table. The infrastructure ceiling of 25 parallel requests is the only thing stopping us from capturing it.
+
+2. What's defensible: Our moat is not the AI — it is the proprietary knowledge base built from Cisco's own firmware manuals, contracts, field engineer resolution uploads, and internal documentation that no external vendor can replicate. Every SR the system handles makes it smarter. Every resolution an engineer uploads deepens the advantage. This compounds. A competitor starting today starts with nothing.
+
+3. The economics: At current volume, AI COGS are $6,974/month against a fully human baseline of $61,100/month — an 88% reduction per deflected SR. Blended inference cost is $0.005/SR through a cascading model strategy. Even if inference costs triple, the margin holds. The pricing model is outcome-based: value is reported as SRs deflected, not seats sold. Annual net benefit today is $466,212. At 100 parallel requests and 80% deflection, that number more than doubles.
+
+**The risks:**
+1. Trust / failure modes: The system is advisory only — it cannot take action on any connected system. The failure mode we are managing is hallucination on contract and warranty queries, where we hold a 0% tolerance target. A tiered confidence UX ensures that low-confidence answers surface a warning and route to a human rather than presenting a wrong answer as fact. The golden dataset and bi-weekly accuracy reviews are the catch mechanism. The Wall Street Journal scenario — an engineer acts on a wrong answer that causes an outage — is mitigated by the HITL architecture: no SR closes without human sign-off.
+
+2. Scale / governance: At 10x volume, three things break: the 25 parallel request ceiling (infrastructure constraint), the bi-weekly review cadence (too slow for the volume), and the drift remediation loop (currently broken — remediation is manual and too slow). The $25K/quarter infrastructure ask directly addresses the first. The 3 engineer ask addresses the second and third. We are not asking to scale before fixing these — we are asking for what it takes to fix them and then scale.
+
+3. Competitive: The kill criteria is clear — if device identification accuracy falls below 98% or the system fails to resolve more than 5% of queries it attempts, we pause and rebuild before scaling. The single competitive scenario that forces a kill is if a Cisco-approved platform vendor ships a native equivalent with access to our knowledge base. We are not exposed to that today — our data is internal and proprietary.
+
+**The ask:**
+3 engineers ($TBD fully loaded) + $25K/quarter infrastructure upgrade to scale from 25 to 100 parallel requests. Time horizon: 6 months to validated 24/7 operations and 70%+ deflection rate. What we get: a support system that runs around the clock without engineer dependency, handles 4x current volume, and generates over $466K in annual net benefit at current SR levels — more as volume grows. What gets paused: outward growth initiatives. We are choosing to deepen and stabilize the core before expanding the surface.
